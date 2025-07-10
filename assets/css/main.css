@@ -139,3 +139,13 @@ main article.skills .skill > h3 {
     border-bottom: 2px solid white;
     margin: 10px 0px;
 }
+
+@media (max-width: 650px) {
+    main article.skills .skills-list{
+        font-size: 1em;
+        flex-direction: column;
+    }
+     main article.skills .skills-list .box {
+        padding: 15px;
+     }
+}
