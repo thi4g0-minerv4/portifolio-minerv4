@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mark-color: #af37fa;
+    --div-background-color: rgba(0, 0, 0, 0.318);
+    --div-background-color-hover: rgba(0, 0, 0, 0.537);
+    --gradient: linear-gradient(270deg, #af37fa, #db27ef, #8930d7, rgb(254, 31, 243));
+}
+span.gradient-text {
+    color: var(--mark-color);
+}
+/* ------HEADER------ */
+@media (max-width: 650px) {
+
+    header nav > ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #logo-site {
+        width: 60px;
+    }
+    header a.btn-contato {
+        padding: 8px 25px;
+    }
+}
+
+header {
+    background-color: rgb(12, 12, 12);
+    padding: 15px 40px;
+    margin-bottom: 90px;
+    border-bottom: 2px solid transparent;
+    border-image: var(--gradient) 1;
+}
+
+/* navbar */
+
+header .navegation {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav > ul {
+    display: flex;
+}
+header nav > ul a {
+    color: rgb(94, 94, 94);
+    margin: 0px 20px;
+
+    transition: 0.3s;
+}
+header nav > ul a:hover {
+    color: white;
+}
+
+header a.btn-contato {
+    background-color: white;
+    color: black;
+
+    padding: 10px 35px;
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+header a.btn-contato:hover {
+    background-color: var(--mark-color);
+    color: white;
+    box-shadow: 0px 0px 10px var(--mark-color);
+    transform: scale(1.01);
+}
+
+/* ------MAIN------- */
+main {
+    padding: 20px;
+}
+main h2 {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+}
+
+main .box {
+    background-color: var(--div-background-color);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+main .box:hover {
+    background-color: var(--div-background-color-hover);
+    transform: scale(1.01);
+}
+
+main section.title-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 50px;
+
+    border-bottom: 2px solid white;
+}
+main section.title-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 8px;
+}
+main section.title-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    
+}
+
+main article.introduction {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+main article.introduction p {
+    text-indent: 20px;
+    text-align: justify;
+}
+
+main article.skills .skills-list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1130px;
+    margin: auto;
+}
+main article.skills .skill {
+    text-align: center;
+    margin: 20px;
+}
+main article.skills .skill > h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin: 10px 0px;
+}
