@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="menuResize()">
     
-    <header>
+    <header id="header">
         <div class="navegation">
             <img id="logo-site" src="assets/imgs/logo.svg" alt="">
-            <nav>
+
+            <button type="button" id="button-menu"><i class="material-icons menu-icon" onclick="menuClick()">menu</i></button>
+            
+            <nav id="desktop">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Habilidades</a></li>
                     <li><a href="#">Projetos</a></li>
-                    <li><a href="#" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/thi4g0-minerv4" target="_blank">Github</a></li>
                 </ul>
             </nav>
             <a class="btn-contato" href="#">Contato</a>
         </div>
+    
+
     </header>
+        <nav id="mobile">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="https://github.com/thi4g0-minerv4" target="_blank">Github</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+    </nav>
     <main>
         <section class="title-section">
             <h1 class="title-text">Olá! Me chamo <span class="gradient-text">Thiago Minerva</span>!</h1>
@@ -72,5 +87,23 @@
             </ul>
         </article>
     </main>
+    <script>
+
+        function menuClick(){
+            if (mobile.style.display == 'block') {
+                mobile.style.display = 'none';
+                header.style.marginBottom = '90px';
+            } else {
+                mobile.style.display = 'block';
+                header.style.marginBottom = '0px';
+            }
+        }
+        function menuResize() {
+            if (mobile.style.display == 'block') {
+                mobile.style.display = 'none'
+                header.style.marginBottom = '90px';
+            }
+        }
+    </script>
 </body>
 </html>
